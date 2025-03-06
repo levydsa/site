@@ -1,0 +1,22 @@
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.5.2/",
+    "react-icons/fa": "https://esm.sh/react-icons@5.5.0/fa?external=react",
+    "react-icons/si": "https://esm.sh/react-icons@5.5.0/si?external=react",
+    "react-icons/md": "https://esm.sh/react-icons@5.5.0/md?external=react",
+    "react-icons": "https://esm.sh/react-icons@5.5.0?external=react",
+    "react": "npm:preact/compat",
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ],
+    "jsx": "precompile",
+    "jsxImportSource": "npm:preact"
+  }
+}
