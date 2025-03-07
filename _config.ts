@@ -5,6 +5,7 @@ import tailwindConfig from "./tailwind.config.mjs";
 import postcss from "lume/plugins/postcss.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import picture from "lume/plugins/picture.ts";
+import favicon from "lume/plugins/favicon.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume({
@@ -26,5 +27,6 @@ site.use(tailwindcss({
 site.use(picture());
 site.use(transformImages());
 site.use(postcss());
+site.use(favicon());
 
 export default site;

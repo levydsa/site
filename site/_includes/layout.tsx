@@ -10,16 +10,10 @@ export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (
       <script
         dangerouslySetInnerHTML={{
           __html: `
-{
-  const themeSet = new Set(["dark", "light"]);
-  const theme = globalThis.localStorage.getItem("theme");
-  const preference = globalThis.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-
-  const root = document.documentElement;
-  root.setAttribute("data-theme", themeSet.has(theme) ? theme : preference);
-}
+(() => {
+  const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", theme);
+})()
       `,
         }}
       />
