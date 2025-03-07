@@ -32,8 +32,10 @@ export default () => {
                 <div className="flex items-center gap-2">
                     <img
                         className="size-48 aspect-square rounded-full object-cover overflow-hidden"
+                        width="200"
                         alt="my face drawn by myself"
                         src="/img/face.png"
+                        transform-images="webp 300"
                     />
                     <IconContext.Provider value={{ size: "1.25em" }}>
                         <ul className="flex flex-col max-w-full gap-1">
@@ -72,10 +74,11 @@ export default () => {
                 <main className="max-w-[60ch] mt-4 text-justify hyphens-auto">
                     <h2 className="text-xl font-medium">About</h2>
                     <p className="mt-1">
-                        Hi! My name is <abbr title="[levi]">Levy</abbr>.
-                        I'm a software developer from Brazil mainly focused on
-                        low level programming, but interested on everything
-                        around math and engineering.
+                        Hi! My name is{" "}
+                        <abbr title="[levi]">Levy</abbr>. I'm a software
+                        developer from Brazil mainly focused on low level
+                        programming, but interested on everything around math
+                        and engineering.
                     </p>
                 </main>
                 <nav className="self-start">
