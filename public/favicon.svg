@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="11.895408mm"
+   height="11.257622mm"
+   viewBox="0 0 11.895408 11.257622"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-15.495725,-46.767685)">
+    <path
+       style="fill:none;stroke-width:1.1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 17.125846,47.425418 c -3.922185,2.166537 3.919243,6.813335 5.969345,5.516498 1.77912,-1.12542 -2.506131,-6.668916 -3.920139,-5.453069 -1.851032,1.591627 4.65693,7.525347 1.94408,9.652196 -1.290607,1.011823 -4.979884,-0.452999 -4.487301,-2.017229 0.990149,-3.144287 7.434404,4.350465 9.674456,1.811388 1.434102,-1.625539 -0.262031,-4.001451 -2.016963,-2.334942"
+       id="path3" />
+  </g>
+  <style>
+    path { stroke: #000; }
+    @media (prefers-color-scheme: dark) {
+        path { stroke: #FFF; }
+    }
+  </style>
+</svg>

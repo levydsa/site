@@ -1,0 +1,6 @@
+.direnv
+.astro
+node_modules/
+zig-out
+.zig-cache
+dist/

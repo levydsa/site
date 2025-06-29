@@ -1,0 +1,20 @@
+---
+import "@/styles/global.css";
+const { title } = Astro.props;
+---
+
+<html
+  class="bg-zinc-100 dark:bg-zinc-950 dark:text-zinc-200 print:bg-white"
+  lang="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+    <title>levy.lat { title ? `– ${title}` : null } </title>
+  </head>
+  <body class="h-screen flex justify-center">
+      <div class="basis-[60ch]"><slot /></div>
+  </body>
+</html>

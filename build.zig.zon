@@ -1,0 +1,15 @@
+.{
+    .name = .site,
+    .version = "0.1.0",
+    .fingerprint = 0x694309e4b1af98b3,
+    .dependencies = .{
+        .qoiz = .{
+            .path = "../qoiz/",
+        },
+    },
+    .paths = .{
+        "src/zig",
+        "build.zig",
+        "build.zig.zon",
+    },
+}

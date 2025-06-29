@@ -1,0 +1,31 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+import { FaHome } from "react-icons/fa";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Base title={post.data.title}>
+  <div class="flex justify-center">
+    <div class="mt-10">
+        <div class="flex items-center gap-2">
+            <a class="px-2 py-1 duration-200 rounded-lg hover:bg-zinc-900 hover:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-zinc-900" href="/">levy.lat</a>
+            <hr class="flex-1"/>
+            </hr>
+        </div>
+      <div class="prose dark:prose-invert mt-10 basis-[60ch] pb-20 grow-0">
+        <Content />
+      </div>
+    </div>
+  </div>
+</Base>

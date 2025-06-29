@@ -1,0 +1,129 @@
+---
+import Link from "@/components/Link.astro";
+import Tag from "@/components/Tag.astro";
+import Base from "@/layouts/Base.astro";
+import { SiNixos, SiC, SiRust } from "react-icons/si";
+
+function elapsed(from: Date) {
+  const now = new Date();
+  console.log(now);
+  return (
+    now.getMonth() -
+    from.getMonth() +
+    12 * (now.getFullYear() - from.getFullYear())
+  );
+}
+---
+
+<Base>
+  <main
+    class="mx-[4ch] mt-10 w-[60ch] flex-shrink pt-8 text-justify hyphens-auto"
+  >
+    <h1 class="mb-3 text-3xl font-bold">Levy Albuquerque</h1>
+    <h2 class="mt-4 mb-1 text-xl font-medium">Summary</h2>
+    <p class="mb-2">
+      Proficient in Rust with hands-on experience in low-level programming and
+      employing Nix for development environments and build reproducibility.
+    </p>
+    <h2 class="mt-4 mb-1 text-xl font-medium">Skills</h2>
+    <ul class="list-disc">
+      <li>Pratical work experience in Rust, C and Nix.</li>
+      <li>English at a professional level</li>
+    </ul>
+    <h2 class="mt-4 mb-1 text-xl font-medium">Education</h2>
+    <ol class="relative ml-2 border-s border-gray-200 dark:border-gray-700">
+      <li class="ms-4 mb-10">
+        <div
+          class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
+        >
+        </div>
+        <time
+          class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
+        >
+          Oct 2024 — current
+        </time>
+        <div class="mt-1 flex gap-3">
+          <svg
+            class="mt-1 h-10 w-10 p-0.5 text-[oklch(59%_0.2138_25.26)] dark:text-[oklch(52%_0.2138_25.26)]"
+            viewBox="0 0 180 180"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="m 131.06067,22.615307 c 4.69733,7.832 5.93067,20.335999 -5.96133,27.467999 -4.676,2.802667 -10.71067,5.146667 -16.70267,5.974667 -11.688,1.614666 -23.194667,-0.489334 -24.010667,-1.852 -1.222666,-2.037334 6.928,-30.681333 19.485337,-38.213333 11.832,-7.0946661 22.79333,-0.708 27.18933,6.622667"
+            ></path>
+            <path
+              fill="currentColor"
+              d="m 14.61267,137.8705 v -8.72 c 0,0 41.074666,-39.342666 55.583999,-45.053333 0,0 28.122666,-12.479999 35.984001,23.925333 4.60266,21.31733 9.88133,37.34933 30.37466,29.80667 7.04267,-2.59334 15.42667,-8.336 26.82267,-17.11333 l 2.00933,7.79866 c 0,0 -82.053328,86.716 -109.953328,0.12667 -1.964,-6.09467 -6.349333,-7.78 -11.306666,-7.16533 -12.02,1.55466 -29.514666,16.39466 -29.514666,16.39466"
+            ></path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-medium">CIn UFPE · Bachelor's degree</h3>
+            <p
+              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-500"
+            >
+              Computer Engineering
+            </p>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <h2 class="mt-4 mb-1 text-xl font-medium">Experience</h2>
+    <ol class="relative ml-2 border-s border-gray-200 dark:border-gray-700">
+      <li class="ms-4 mb-10">
+        <div
+          class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
+        >
+        </div>
+        <time
+          class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
+        >
+          July 2024 — current ({elapsed(new Date("July 2024"))} mos)
+        </time>
+        <div class="mt-1 flex gap-3">
+          <svg
+            class="mt-1 h-10 w-10 text-[oklch(78%_0.1475_174.4)] dark:text-[oklch(88%_0.1475_174.4)]"
+            viewBox="0 0 200 170"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M171.345 0V30.78L156.805 34.53L147.695 23.56L142.885 33.02C132.965 30.32 119.305 28.58 100.515 28.58C81.7251 28.58 68.0651 30.33 58.1451 33.02L53.3351 23.56L44.2251 34.53L29.6851 30.78V0C29.6851 0 5.19515 20.67 0.525146 48.61L32.665 59.73C33.715 79.16 42.4551 131.61 44.9551 136.37C47.6151 141.44 61.735 155.93 72.785 161.5C72.785 161.5 76.7851 157.27 79.2251 153.54C82.3251 157.19 98.3351 169.99 100.525 169.99C102.715 169.99 118.725 157.19 121.825 153.54C124.265 157.27 128.265 161.5 128.265 161.5C139.315 155.93 153.435 141.44 156.095 136.37C158.595 131.61 167.335 79.16 168.385 59.73L200.525 48.61C195.835 20.67 171.345 0 171.345 0ZM154.305 93.36L132.555 95.3L134.465 121.97C134.465 121.97 121.235 132.92 100.505 132.92C79.7751 132.92 66.545 121.97 66.545 121.97L68.4551 95.3L46.7051 93.36L42.9851 63.32L79.035 75.8L76.2351 113.19C82.9351 114.89 89.9851 116.58 100.515 116.58C111.045 116.58 118.085 114.89 124.785 113.19L121.985 75.8L158.035 63.32L154.315 93.36H154.305Z"
+              fill="currentColor"
+            >
+            </path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-medium">Turso · Software Engineer</h3>
+            <p
+              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-500"
+            >
+              Lead on SDK maintenance and development. Working on
+              <Link href="https://github.com/tursodatabase/limbo">Limbo</Link>,
+              <Link href="https://github.com/tursodatabase/libsql">Libsql</Link>
+              and
+              <Link
+                href="https://github.com/orgs/tursodatabase/repositories?language=&q=libsql-&sort=&type=all"
+                >various SDKs</Link
+              >.
+            </p>
+            <ul
+              class="-ml-1 flex gap-1 align-baseline *:flex *:items-center *:gap-1 *:rounded-full *:px-2 *:py-1"
+            >
+              <li class="bg-orange-200 text-orange-950 dark:bg-orange-400">
+                <SiRust />Rust
+              </li>
+              <li class="bg-zinc-200 text-zinc-950 dark:bg-zinc-400">
+                <SiC />C
+              </li>
+              <li class="bg-sky-200 text-sky-950 dark:bg-sky-400">
+                <SiNixos />Nix
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </main>
+</Base>

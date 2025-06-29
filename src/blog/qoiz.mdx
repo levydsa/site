@@ -1,0 +1,36 @@
+---
+title: 'QOIZ'
+---
+
+import Qoiz from "@/components/Qoiz.tsx";
+
+import { Image } from "astro:assets";
+import qoiz from "@/images/qoiz.svg";
+
+export const title = "QOIZ";
+
+<h1 className="flex justify-center mb-20 prose-img:my-0">
+  <Image src={qoiz} alt="qoiz" />
+</h1>
+
+A library for encoding and decoding
+[QOI](https://en.wikipedia.org/wiki/QOI_(image_format)) images in Zig.
+
+```zig
+const qoiz = @import("qoiz");
+
+test "image init reader" {
+    const file = try fs.cwd().openFile("image.qoi", .{});
+    defer file.close();
+
+    const image = try qoiz.Image(.rgba).initReader(
+        testing.allocator,
+        file.reader(),
+    );
+    defer image.deinit();
+}
+```
+
+Demo running with WebAssembly:
+
+<Qoiz client:load />

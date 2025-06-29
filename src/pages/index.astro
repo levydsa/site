@@ -1,0 +1,77 @@
+---
+import Base from "@/layouts/Base.astro";
+import Qoiz from "@/components/Qoiz.tsx";
+import Tag from "@/components/Tag.astro";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaAt,
+  FaAddressCard,
+  FaTwitter,
+  FaPen,
+} from "react-icons/fa";
+import { Image } from "astro:assets";
+import face from "../images/face.png";
+---
+
+<Base>
+  <div class="flex flex-col h-full justify-center items-center gap-4 mx-8">
+    <div class="flex items-center gap-2">
+      <Image
+        class="aspect-square size-48 overflow-hidden rounded-full object-cover"
+        width="300"
+        alt={`A self-portrait of a young man with curly dark hair and glasses,
+        smiling faintly and looking directly at the camera. He is wearing a
+        dark t-shirt and is seated outdoors at night, with blurred lights and
+        structures in the background.`}
+        src={face}
+      />
+      <ul class="flex max-w-full flex-col gap-1">
+        {
+          [
+            {
+              url: "https://github.com/levydsa",
+              icon: <FaGithub />,
+              text: "@levydsa",
+            },
+            {
+              url: "https://twitter.com/levyddsa",
+              icon: <FaTwitter />,
+              text: "@levyddsa",
+            },
+            {
+              url: "https://linkedin.com/in/levy-albuquerque",
+              icon: <FaLinkedin />,
+              text: "@levy-albuquerque",
+            },
+            {
+              url: "mailto:me@levy.lat",
+              icon: <FaAt />,
+              text: "me@levy.lat",
+            },
+          ].map(({ url, text, icon }) => (
+            <li>
+              <Tag url={url} text={text}>
+                {icon}
+              </Tag>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <main class="max-w-[45ch] text-justify hyphens-auto">
+      <h2 class="text-xl font-medium">About</h2>
+      <p class="mt-1">
+        Hi! My name is <abbr title="/levi/">Levy</abbr>. I'm a software
+        developer from Brazil mainly focused on low level programming, but
+        interested on everything around math and engineering.
+      </p>
+    </main>
+    <nav>
+      <ul class="flex gap-1">
+        <li><Tag url="/resume" text="Resume"><FaAddressCard /></Tag></li>
+        <li><Tag url="/blog" text="Blog"><FaPen /></Tag></li>
+      </ul>
+    </nav>
+  </div>
+</Base>
