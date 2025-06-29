@@ -14,21 +14,11 @@ const __dirname = path.dirname(__filename);
 
 const current_dir = __dirname;
 
-const zigWasmPlugin = (dir: string, out: string, compile: string): Plugin => {
+const zigWasmPlugin = (dir: string, compile: string): Plugin => {
   const zigDir = path.resolve(current_dir, dir);
 
   return {
     name: "zig-wasm-watch",
-
-    config() {
-      return {
-        resolve: {
-          alias: {
-            "@zig": path.resolve(current_dir, out, "bin"),
-          },
-        },
-      };
-    },
 
     configureServer(server) {
       server.watcher.add(zigDir);
@@ -69,7 +59,7 @@ export default defineConfig({
   vite: {
     plugins: [
       tailwindcss(),
-      zigWasmPlugin("src/zig", "zig-out", "zig build --color on"),
+      zigWasmPlugin("src/zig", "zig build --color on"),
     ],
     resolve: {
       alias: {
