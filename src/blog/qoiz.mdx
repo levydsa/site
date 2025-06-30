@@ -1,5 +1,7 @@
 ---
-title: 'QOIZ'
+title: QOIZ – A Zig library for QOI images 
+date: 2025-06-29
+draft: true
 ---
 
 import Qoiz from "@/components/Qoiz.tsx";
@@ -7,14 +9,12 @@ import Qoiz from "@/components/Qoiz.tsx";
 import { Image } from "astro:assets";
 import qoiz from "@/images/qoiz.svg";
 
-export const title = "QOIZ";
-
-<h1 className="flex justify-center mb-20 prose-img:my-0">
+<h1 className="prose-img:my-0 mb-10 flex justify-center">
   <Image src={qoiz} alt="qoiz" />
 </h1>
 
 A library for encoding and decoding
-[QOI](https://en.wikipedia.org/wiki/QOI_(image_format)) images in Zig.
+[QOI](<https://en.wikipedia.org/wiki/QOI_(image_format)>) images in Zig.
 
 ```zig
 const qoiz = @import("qoiz");

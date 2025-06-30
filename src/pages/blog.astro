@@ -1,41 +1,28 @@
 ---
 import Base from "@/layouts/Base.astro";
-import Qoiz from "@/components/Qoiz.tsx";
-import Tag from "@/components/Tag.tsx";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaAt,
-  FaAddressCard,
-  FaTwitter,
-  FaPen,
-} from "react-icons/fa";
-import { Image } from "astro:assets";
-import face from "../images/face.png";
 import { getCollection } from "astro:content";
-import { TiAt } from "react-icons/ti";
 
 const posts = await getCollection("blog");
 ---
 
 <Base title="blog">
-  <div class="mx-8">
-    <h2 class="mt-10 mb-2 text-2xl font-medium">Blog</h2>
-    <hr />
-    <ul class="mt-10">
-      {
-        posts.map(({ id, data: { title } }) => (
-          <li class="">
-            <a
-              class="block rounded-md border px-4 py-3 duration-200 hover:bg-zinc-900 hover:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-zinc-900"
-              href={`/blog/${id}`}
-            >
-              <h3 class="text-xl font-medium">{title}</h3>
-              <aside class="font-mono text-xs opacity-50">2025-06-29</aside>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <ul class="mt-10">
+    {
+      posts.map(({ id, data: { title, date } }) => (
+        <li class="px-4">
+          <a
+            class="flex items-center justify-between border-l-4 border-zinc-900 px-4 py-2 duration-300 hover:border-zinc-300 hover:bg-zinc-200 dark:hover:text-zinc-900"
+            href={`/blog/${id}`}
+          >
+            <h3 class="mr-4 flex items-baseline text-xl font-medium">
+              {title}
+            </h3>
+            <aside class="font-mono text-xs opacity-50">
+              {date.toISOString().slice(0, 10)}
+            </aside>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Base>

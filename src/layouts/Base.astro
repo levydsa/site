@@ -10,11 +10,20 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
-    <title>levy.lat { title ? `– ${title}` : null } </title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>levy.lat {title ? `– ${title}` : null}</title>
   </head>
-  <body class="h-screen flex justify-center">
-      <div class="basis-[60ch]"><slot /></div>
+  <body class="flex h-screen justify-center hyphens-auto">
+    <div class="mx-5 max-w-[60ch] min-w-0 flex-1 py-8 flex flex-col gap-8 *:shrink-0">
+      <div class="flex justify-center gap-2 print:hidden">
+        <a
+          class="rounded-xl px-2 py-1 font-bold duration-200 hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900"
+          href="/">levy.lat</a
+        >
+      </div>
+      <slot />
+      <div class="pb-8"></div>
+    </div>
   </body>
 </html>

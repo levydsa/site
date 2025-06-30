@@ -50,17 +50,14 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       themes: {
-        light: 'github-light',
-        dark: 'github-dark',
+        light: "github-light",
+        dark: "github-dark",
       },
     },
   },
 
   vite: {
-    plugins: [
-      tailwindcss(),
-      zigWasmPlugin("src/zig", "zig build --color on"),
-    ],
+    plugins: [tailwindcss(), zigWasmPlugin("src/zig", "zig build --color on")],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),

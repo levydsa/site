@@ -16,9 +16,7 @@ function elapsed(from: Date) {
 ---
 
 <Base>
-  <main
-    class="mx-[4ch] mt-10 w-[60ch] flex-shrink pt-8 text-justify hyphens-auto"
-  >
+  <main class="mt-10 flex-shrink py-8 text-justify hyphens-auto">
     <h1 class="mb-3 text-3xl font-bold">Levy Albuquerque</h1>
     <h2 class="mt-4 mb-1 text-xl font-medium">Summary</h2>
     <p class="mb-2">
@@ -26,7 +24,7 @@ function elapsed(from: Date) {
       employing Nix for development environments and build reproducibility.
     </p>
     <h2 class="mt-4 mb-1 text-xl font-medium">Skills</h2>
-    <ul class="list-disc">
+    <ul class="list-disc pl-4">
       <li>Pratical work experience in Rust, C and Nix.</li>
       <li>English at a professional level</li>
     </ul>
@@ -44,7 +42,7 @@ function elapsed(from: Date) {
         </time>
         <div class="mt-1 flex gap-3">
           <svg
-            class="mt-1 h-10 w-10 p-0.5 text-[oklch(59%_0.2138_25.26)] dark:text-[oklch(52%_0.2138_25.26)]"
+            class="mt-1 size-10 shrink-0 p-0.5 text-[oklch(59%_0.2138_25.26)] dark:text-[oklch(52%_0.2138_25.26)]"
             viewBox="0 0 180 180"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +59,7 @@ function elapsed(from: Date) {
           <div>
             <h3 class="text-lg font-medium">CIn UFPE · Bachelor's degree</h3>
             <p
-              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-500"
+              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-300"
             >
               Computer Engineering
             </p>
@@ -83,7 +81,7 @@ function elapsed(from: Date) {
         </time>
         <div class="mt-1 flex gap-3">
           <svg
-            class="mt-1 h-10 w-10 text-[oklch(78%_0.1475_174.4)] dark:text-[oklch(88%_0.1475_174.4)]"
+            class="mt-1 size-10 shrink-0 text-[oklch(78%_0.1475_174.4)] dark:text-[oklch(88%_0.1475_174.4)]"
             viewBox="0 0 200 170"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -97,10 +95,12 @@ function elapsed(from: Date) {
           <div>
             <h3 class="text-lg font-medium">Turso · Software Engineer</h3>
             <p
-              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-500"
+              class="mb-2 text-base font-normal text-gray-600 dark:text-gray-300"
             >
               Lead on SDK maintenance and development. Working on
-              <Link href="https://github.com/tursodatabase/limbo">Limbo</Link>,
+              <Link href="https://github.com/tursodatabase/turso"
+                >Turso Core</Link
+              > (The <b class="font-bold">next</b> evolution of SQLite),
               <Link href="https://github.com/tursodatabase/libsql">Libsql</Link>
               and
               <Link
