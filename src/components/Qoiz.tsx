@@ -72,7 +72,7 @@ export default () => {
   const [file, setFile] = useState<File>();
   const [wasm, setWasm] = useState<WebAssembly.Instance | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const inputRef = useRef<HTMLCanvasElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const processImageFile = async (file: File, canvas: HTMLCanvasElement) => {
     if (!wasm) return;

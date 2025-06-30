@@ -16,7 +16,7 @@ const posts = await getCollection("blog");
 ---
 
 <Base>
-  <div class="flex flex-col items-center justify-center gap-4 my-auto">
+  <div class="my-auto flex flex-col items-center justify-center gap-4">
     <div class="flex flex-col items-center gap-2 sm:flex-row">
       <Image
         class="aspect-square size-48 overflow-hidden rounded-full object-cover"
@@ -82,7 +82,7 @@ const posts = await getCollection("blog");
       <ul class="mt-2">
         {
           posts
-            .sort((a, b) => a.data.date - b.data.date)
+            .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
             .slice(0, 3)
             .map(({ id, data: { title, date } }) => (
               <li>
